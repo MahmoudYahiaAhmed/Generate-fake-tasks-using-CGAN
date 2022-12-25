@@ -1,1 +1,1 @@
-# Generate-fake-tasks-using-CGAN-and-WGAN-with-Wassertein-loss-function
+# Generate-fake-tasks-using-CGAN
