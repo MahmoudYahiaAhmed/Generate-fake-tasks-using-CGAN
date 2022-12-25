@@ -30,15 +30,18 @@ and RF/Adaboost as the second level classifier
 ![Project steps](https://drive.google.com/uc?export=view&id=1YuHxXGr96Zgg2h5zbb_uO4ejviF8cEo2)
 
 ## Results 
-**The generated tasks from the generator are robust and succussed to fault the
-classic ML algorithms because it is tried to generate tasks very close to the real
-one, so the models can’t determine it and the accuracies has been decreased
-from 0.92 to 0.575 in the Adaboost model and has been decreased from 0.993 to
-0.590 in the Random Forest model.<br>
-In the cascade approach the discriminator helped the models because it can filter
-the fake tasks, so after the filtering it out the accuracies increased again to 0.926
-in Adaboost and to 0.993 in the Random Forest model and this result is
-approximately one before mixing which means that the discriminator filtered**
+Machine learning models obtain accepted accuracies during training and testing phase before
+the GAN phase.
+After generate new data with generator the model was very confused to classify the data samples for which
+class they belong to, where the accuracy was very low as the model was trying to classify generated data that
+could be acceptable sample or not.
+The discriminator tries to distinguish real data from the data created by the generator. After we apply that
+output comes from using the generated data from generator with discriminator. I tried to map values to class
+using average value but I got result totally different where the result has been improved from low accuracy
+as shown in fig.2 to high accuracy.
 
-
+References.
+[1] Jupyter Notebook Viewer.
+https://nbviewer.org/github/codyznash/GANs_for_Credit_Card_Data/blob/master/GAN_comparisons.ipynb.
+[2] Santhanam, Sivasurya. “GANs from Scratch.” Medium, 11 Jan. 2020,https://towardsdatascience.com/gans-from-scratch-8f5da17b3fb4.
 
